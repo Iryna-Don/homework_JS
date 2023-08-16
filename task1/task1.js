@@ -27,15 +27,17 @@ console.log(typeof b);
 console.log(typeof c);
 // #4
 let userName = prompt("Enter your firstname: ");
-if (!!!userName) {
-  userName = prompt("Enter your name ONE MORE TIME: ");
-}
+// if (!!!userName) {
+//   userName = prompt("Enter your name ONE MORE TIME: ");
+// }
 let userMiddleName = prompt("Enter your middlename: ");
-if (!!!userMiddleName) {
-  userMiddleName = prompt("Enter your middlename ONE MORE TIME: ");
-}
+// if (!!!userMiddleName) {
+//   userMiddleName = prompt("Enter your middlename ONE MORE TIME: ");
+// }
 let userAge = prompt("Enter your age: ");
-if (!!!userAge) {
-  userAge = prompt("Enter your age ONE MORE TIME: ");
-}
+// if (!!!userAge) {
+//   userAge = prompt("Enter your age ONE MORE TIME: ");
+// }
+userAge = Number(userAge);
 console.log(userName + " " + userMiddleName + " " + "age: " + userAge);
+console.log(typeof userAge);
