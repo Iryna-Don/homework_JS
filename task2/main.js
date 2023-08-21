@@ -77,7 +77,7 @@ let listOfBooks = [
 // let authorName = String();
 // let authorAge = Number();
 for (let r = 0; r < listOfBooks.length; r++) {
-  listOfBooks[r].author = ["authorName", "authorAge"];
+  listOfBooks[r].author = [{ name: "authorName" }, { age: "authorAge" }];
 }
 console.log(listOfBooks);
 
