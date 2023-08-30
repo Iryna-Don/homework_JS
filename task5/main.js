@@ -1,4 +1,4 @@
-// ДЗ №4
+// ДЗ №5
 //
 // - створити функцію яка обчислює та повертає площу прямокутника зі сторонами а і б
 let getAreaOfARectangle = (a, b) => a * b;
@@ -16,13 +16,13 @@ let getCylinderArea = (h, r) => 2 * (Math.PI * r ** 2) + 2 * Math.PI * r * h;
 console.log(getCylinderArea(2, 5).toFixed(2));
 // ----------------------------------------------------------------------------------------------------
 // - створити функцію яка приймає масив та виводить кожен його елемент
-let displayingArrayElements = (someArray) => {
+let displayingArrayElements = (...someArray) => {
   for (i = 0; i < someArray.length; i++) {
     console.log(someArray[i]);
   }
   return console.log(someArray);
 };
-displayingArrayElements([2, 8, 12, 4.3, "more", true, false, 3, 0]);
+displayingArrayElements(2, 8, 12, 4.3, "more", true, false, 3, 0);
 // // -------------------------------------------------OR--------------------------------------------------
 let users = [
   { name: "vasya", age: 31, status: false },
@@ -80,7 +80,7 @@ makeAList1("I still like JS", 3);
 // // ----------------------------------------------------------------------------------------------------
 
 // // - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
-let displayingArrayElements2 = (someArray2) => {
+let displayingArrayElements2 = (...someArray2) => {
   document.write(`<ul>`);
   for (i = 0; i < someArray2.length; i++) {
     document.write(`<li>${someArray2[i]}</li>`);
@@ -88,7 +88,7 @@ let displayingArrayElements2 = (someArray2) => {
   document.write(`</ul>`);
   return console.log("That's the end");
 };
-displayingArrayElements2([65, 23, 12, 34.3, "more fun", true, false, 3, 78]);
+displayingArrayElements2(65, 23, 12, 34.3, "more fun", true, false, 3, 78);
 // ----------------------------------------------------------------------------------------------------
 // - створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об'єкту окремий блок.
 let users2 = [
@@ -142,7 +142,7 @@ let minimumArrayElements = (array) => {
 }
 console.log(minimumArrayElements(arr1));
 // -------------------------------------------------------OR------------------------------------------------
-let minArrayElements = (someArray3) => {
+let minArrayElements = (...someArray3) => {
   let min = someArray3[0];
   for (let number of someArray3) {
     if (number < min) {
@@ -151,7 +151,7 @@ let minArrayElements = (someArray3) => {
   }
   return min;
 }
-console.log(minArrayElements([12, -120, 0, -27.3, 3, -89]));
+console.log(minArrayElements(12, -120, 0, -27.3, 3, -89));
 // ----------------------------------------------------------------------------------------------------
 // - створити функцію sum(arr)яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад sum([1,2,10]) //->13
 let sum = (someArray4) => {
