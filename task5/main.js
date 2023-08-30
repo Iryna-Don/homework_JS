@@ -1,24 +1,18 @@
 // ДЗ №4
 //
 // - створити функцію яка обчислює та повертає площу прямокутника зі сторонами а і б
-let getAreaOfARectangle = (a, b) => {
-  return a * b;
-}
+let getAreaOfARectangle = (a, b) => a * b;
 getAreaOfARectangle(3, 12);
 console.log(getAreaOfARectangle(3, 12));
 // ----------------------------------------------------------------------------------------------------
 // - створити функцію яка обчислює та повертає площу кола з радіусом r
-let getAreaOfCircle = (r) => {
-  return Math.PI * r ** 2;
-}
+let getAreaOfCircle = (r) => Math.PI * r ** 2;
 console.log(getAreaOfCircle(3));
 // заокруглення до сотих
 console.log(getAreaOfCircle(3).toFixed(2));
 // ----------------------------------------------------------------------------------------------------
 // - створити функцію яка обчислює та повертає площу циліндру висотою h, та радіусом r
-let getCylinderArea = (h, r) => {
-  return 2 * (Math.PI * r ** 2) + 2 * Math.PI * r * h;
-}
+let getCylinderArea = (h, r) => 2 * (Math.PI * r ** 2) + 2 * Math.PI * r * h;
 console.log(getCylinderArea(2, 5).toFixed(2));
 // ----------------------------------------------------------------------------------------------------
 // - створити функцію яка приймає масив та виводить кожен його елемент
